@@ -6,7 +6,7 @@ import { useAuthContext } from '../../lib/user/AuthContext';
 import AnnouncementCard from '../../components/dashboardComponents/AnnouncementCards';
 import Sidebar from '../../components/dashboardComponents/Sidebar';
 import firebase from 'firebase';
-import 'firebase/messaging';
+import '@firebase/messaging';
 import { GetServerSideProps } from 'next';
 import { RequestHelper } from '../../lib/request-helper';
 import { useFCMContext } from '../../lib/service-worker/FCMContext';

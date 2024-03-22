@@ -6,7 +6,7 @@ import ProfileDialog from './ProfileDialog';
 import { useUser } from '../lib/profile/user-data';
 import { useAuthContext } from '../lib/user/AuthContext';
 import { navItems } from '../lib/data';
-import firebase from 'firebase/app';
+import firebase from '@firebase/app';
 import Image from 'next/image';
 import NavLink from './NavLink';
 

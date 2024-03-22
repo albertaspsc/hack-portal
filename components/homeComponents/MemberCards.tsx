@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import 'firebase/storage';
+import '@firebase/storage';
 import firebase from 'firebase';
 import Image from 'next/image';
 import defaultPFP from '../../public/assets/defaultPFP.jpg';
