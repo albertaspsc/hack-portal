@@ -186,7 +186,7 @@ export default function Register({ allowedRegistrations }: RegisterPageProps) {
     <div className="flex flex-col flex-grow bg-secondary">
       <Head>
         <title>Hacker Registration</title>
-        <meta name="description" content="Register for [HACKATHON NAME]" />
+        <meta name="description" content="Register for MRUHacks" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <section className="pt-4 pl-4">
@@ -201,7 +201,7 @@ export default function Register({ allowedRegistrations }: RegisterPageProps) {
         id="jumbotron"
         className="text-primaryDark lg:text-4xl sm:text-3xl text-2xl font-bold text-center lg:mt-0 mt-6 mb-6"
       >
-        HackPortal Hacker Registration
+        MRUHacks Hacker Registration
       </section>
 
       <section className="relative">

@@ -10,7 +10,7 @@ export default function HomeFooter() {
         <div className="text-base md:text-lg">
           {' '}
           {/* !change */}
-          Checkout HackUTD&apos;s{' '}
+          Checkout MRUHacks&apos;{' '}
           <a
             href="https://acmutd.co/"
             rel="noopener noreferrer"

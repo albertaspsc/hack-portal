@@ -46,7 +46,7 @@ export const hackPortalConfig: HackPortalConfig = {
             required: true,
             id: 'age',
             name: 'age',
-            min: '1',
+            min: '18',
             max: '100',
             pattern: '[0-9]+',
             initialValue: null,
@@ -177,31 +177,31 @@ export const hackPortalConfig: HackPortalConfig = {
         dropdownQuestions: [
           {
             //Grade question
-            question: 'Current level of study',
+            question: 'Year of Study',
             required: true,
             id: 'studyLevel',
             name: 'studyLevel',
             initialValue: '',
             options: [
               {
-                title: 'Freshman',
-                value: 'freshman',
+                title: '1st',
+                value: '1st',
               },
               {
-                title: 'Sophomore',
-                value: 'sophomore',
+                title: '2nd',
+                value: '2nd',
               },
               {
-                title: 'Junior',
-                value: 'junior',
+                title: '3rd',
+                value: '3rd',
               },
               {
-                title: 'Senior',
-                value: 'senior',
+                title: '4th +',
+                value: '4th +',
               },
               {
-                title: 'Graduate Student',
-                value: 'grad',
+                title: 'Graduate (<1 year after)',
+                value: 'Graduate (<1 year after)',
               },
             ],
           },
@@ -255,7 +255,7 @@ export const hackPortalConfig: HackPortalConfig = {
           },
           {
             //Heard from question
-            question: 'Where did you hear about HackPortal?',
+            question: 'Where did you hear about MRU Hacks?',
             required: true,
             id: 'heardFrom',
             name: 'heardFrom',
@@ -266,16 +266,24 @@ export const hackPortalConfig: HackPortalConfig = {
                 value: 'Instagram',
               },
               {
-                title: 'Twitter',
-                value: 'Twitter',
+                title: 'LinkedIn',
+                value: 'LinkedIn',
               },
               {
-                title: 'Event Site',
-                value: 'Event Site',
+                title: 'Posters',
+                value: 'Posters',
               },
               {
-                title: 'Friend',
-                value: 'Friend',
+                title: 'Student Newsletters',
+                value: 'newsletters',
+              },
+              {
+                title: 'In my classroom',
+                value: 'in class',
+              },
+              {
+                title: 'Word of mouth',
+                value: 'Word of mouth',
               },
               {
                 title: 'Other',
@@ -328,6 +336,14 @@ export const hackPortalConfig: HackPortalConfig = {
             name: 'dietary',
             initialValue: [],
             options: [
+              {
+                title: 'Halal',
+                value: 'Halal',
+              },
+              {
+                title: 'Kosher',
+                value: 'Kosher',
+              },
               {
                 title: 'Vegan',
                 value: 'Vegan',
