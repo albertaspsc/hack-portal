@@ -29,7 +29,7 @@ export default function DashboardHeader() {
           <NavLink
             href="/dashboard"
             exact={true}
-            activeOptions={'border-b-4 border-primaryDark text-complementaryDark'}
+            activeOptions={'border-b-4 border-primaryDark text-complementary'}
             className="xl:mr-6 mr-4 py-2"
           >
             HackCenter
@@ -37,7 +37,7 @@ export default function DashboardHeader() {
           <NavLink
             href="/dashboard/questions"
             exact={true}
-            activeOptions={'border-b-4 border-primaryDark text-complementaryDark'}
+            activeOptions={'border-b-4 border-primaryDark text-complementary'}
             className="xl:ml-6 ml-4 py-2"
           >
             Ask a Question
@@ -53,7 +53,7 @@ export default function DashboardHeader() {
           <p>Dashboard Menu</p>
           <ChevronRightIcon className={`${isOpen ? 'transform rotate-90' : ''} w-5 h-5`} />
         </button>
-        <div className="panel w-full bg-secondaryDark text-primaryDark text-sm">
+        <div className="panel w-full bg-secondaryDark text-primary text-sm">
           <ul className="">
             <li className="p-2 hover:bg-secondary cursor-pointer">
               <Link href="/dashboard" passHref>

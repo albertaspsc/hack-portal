@@ -5,15 +5,15 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: '#7B81FF', //purple
+        primary: '#FAC211', //purple
         primaryDark: '#05149C',
-        secondary: '#F2F3FF', //light purple
+        secondary: '#F3961D', //light purple
         secondaryDark: '#BABFFF',
-        complementary: '#4C4950', //gray
+        complementary: '#F2711F', //gray
         complementaryDark: '#252427',
       },
       fontFamily: {
-        sans: ['Roboto', 'sans-serif'],
+        sans: ['Roboto', 'Roboto Mono', 'sans-serif'],
       },
       width: {
         '1/8': '12.5%',
