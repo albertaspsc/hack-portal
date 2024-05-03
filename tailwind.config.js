@@ -5,11 +5,11 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: '#FAC211', //purple
+        primary: '#FAC211', //light yellow/orange
         primaryDark: '#05149C',
-        secondary: '#F3961D', //light purple
+        secondary: '#F3961D', //medium orange
         secondaryDark: '#BABFFF',
-        complementary: '#F2711F', //gray
+        complementary: '#F2711F', //bright orange
         complementaryDark: '#252427',
       },
       fontFamily: {

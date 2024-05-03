@@ -72,7 +72,7 @@ export default function ProfilePage() {
       <div className="flex flex-col md:flex-row 2xl:gap-x-32 gap-x-20 2xl:justify-center">
         {/* QR Code */}
         <div className="">
-          <div className="bg-secondary rounded-lg p-8 h-min w-min mx-auto">
+          <div className="bg-white rounded-lg p-8 h-min w-min mx-auto">
             {/* Dark represents dots, Light represents the background */}
             <QRCode
               data={'hack:' + user.id}

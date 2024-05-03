@@ -98,14 +98,14 @@ export default function Admin({ questions }: { questions: QADocument[] }) {
           <textarea
             value={announcement}
             onChange={(e) => setAnnouncement(e.target.value)}
-            className="w-full rounded-xl p-4 bg-secondary border-transparent focus:border-primaryDark caret-primaryDark"
+            className="w-full rounded-xl p-4 bg-white border-gray-500 focus:border-primaryDark caret-primaryDark"
             placeholder="Type your announcement here"
             rows={5}
           ></textarea>
           <div className="flex flex-row justify-end my-4">
             <button
               type="button"
-              className="py-1 px-7 rounded-lg font-medium hover:bg-secondary bg-primaryDark text-secondary hover:text-primaryDark border-[1px] border-transparent hover:border-primaryDark transition duration-300 ease-in-out"
+              className="py-1 px-7 rounded-lg font-bold hover:bg-primary bg-secondary text-white hover:text-black border-[1px] border-transparent hover:border-primaryDark transition duration-300 ease-in-out"
               onClick={() => {
                 postAnnouncement();
               }}

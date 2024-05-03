@@ -99,7 +99,7 @@ export default function AppHeader() {
             <a className="flex gap-2 ml-[6px] font-display self-center items-center md:ml-0">
               {/* !change src */}
               <Image src={'/assets/PlaceHolderLogo.png'} width="45px" height="35px" />
-              <span className="text-lg font-black md:z-0 md:text-3xl text-primaryDark">
+              <span className="text-lg font-black md:z-0 md:text-3xl text-complementary">
                 MRUHacks
               </span>
             </a>

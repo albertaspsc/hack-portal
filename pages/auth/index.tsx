@@ -114,7 +114,7 @@ export default function AuthPage() {
 
   return (
     <>
-      <section className="bg-secondary min-h-screen">
+      <section className="bg-white min-h-screen">
         <div className="p-4">
           <Link href="/" passHref>
             <div className="cursor-pointer items-center inline-flex text-primaryDark font-medium">
