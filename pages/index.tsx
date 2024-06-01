@@ -43,7 +43,7 @@ export default function Home(props: {
   return (
     <>
       <Head>
-        <title>MRUHacks</title> {/* !change */}
+        <title>MRUHacks 2024</title> {/* !change */}
         <meta name="description" content="A default HackPortal instance" /> {/* !change */}
         <link rel="icon" href="/favicon.ico" />
       </Head>

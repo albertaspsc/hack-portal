@@ -186,7 +186,7 @@ export default function Register({ allowedRegistrations }: RegisterPageProps) {
     <div className="flex flex-col flex-grow bg-secondary">
       <Head>
         <title>Hacker Registration</title>
-        <meta name="description" content="Register for MRUHacks" />
+        <meta name="description" content="Register for MRUHacks 2024" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <section className="pt-4 pl-4">
