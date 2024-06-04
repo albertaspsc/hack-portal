@@ -1,18 +1,16 @@
-import TwitterIcon from '@mui/icons-material/Twitter';
 import InstagramIcon from '@mui/icons-material/Instagram';
-import FacebookIcon from '@mui/icons-material/Facebook';
+import LinkedIn from '@mui/icons-material/LinkedIn';
 
 export default function HomeFooter() {
   return (
     <section className=" mt-16 px-6 py-8 md:text-base text-xs">
       <hr className="my-4 bg-complementary" />
-      <div className="flex flex-col items-center justify-center gap-2 text-complementary text-center">
+      <div className="flex flex-col items-center justify-center gap-2 text-primary text-center">
         <div className="text-base md:text-lg">
           {' '}
-          {/* !change */}
           Checkout MRUHacks&apos;{' '}
           <a
-            href="https://acmutd.co/"
+            href="https://mruhacks.ca/"
             rel="noopener noreferrer"
             target="_blank"
             className="font-black hover:underline"
@@ -49,18 +47,15 @@ export default function HomeFooter() {
         </div>
         {/* Social icons */} {/* !change */}
         <div className="space-x-8 > * + *">
-          <a href="https://twitter.com/hackutd" rel="noopener noreferrer" target="_blank">
-            <TwitterIcon className="footerIcon" />
+          <a href="https://www.instagram.com/mruhacks" rel="noopener noreferrer" target="_blank">
+            <InstagramIcon className="footerIcon" />
           </a>
           <a
-            href="https://www.instagram.com/hackutd/?hl=en"
+            href="https://www.linkedin.com/company/mruhacks"
             rel="noopener noreferrer"
             target="_blank"
           >
-            <InstagramIcon className="footerIcon" />
-          </a>
-          <a href="https://www.facebook.com/hackutd/" rel="noopener noreferrer" target="_blank">
-            <FacebookIcon className="footerIcon" />
+            <LinkedIn className="footerIcon" />
           </a>
         </div>
       </div>

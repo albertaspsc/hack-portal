@@ -103,7 +103,7 @@ export default function HomeChallenges(props: { challenges: Challenge[] }) {
                   <div
                     id={`org${idx}`}
                     className={`${idx} font-bold text-primaryDark p-5 flex align-bottom flex-col items-start justify-end z-10 relative cursor-pointer text-left text-xl w-[22rem] 2xl:w-full sm:h-[16rem] h-[14rem] ${
-                      idx == challengeIdx ? 'bg-primary/50' : 'bg-secondary'
+                      idx == challengeIdx ? 'bg-background' : 'bg-background'
                     } rounded-lg`}
                     key={idx}
                     onClick={() => changeOrg(challenge, idx)}

@@ -11,7 +11,7 @@ function HomeChallengeCard(props) {
     description = props.description.replaceAll('\\n', '\n');
   }
   return (
-    <div className="bg-primary/50 w-full rounded-lg p-6 text-primaryDark">
+    <div className="bg-background w-full rounded-lg p-6 text-primaryDark">
       <div className="text-left font-bold md:text-2xl test-base">{props.title}</div>
       <div className="text-left md:text-xl test-base">Presented by {props.organization}</div>
       <p className="whitespace-pre-line my-3 md:text-base text-xs">{description}</p>

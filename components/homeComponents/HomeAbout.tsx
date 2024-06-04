@@ -1,24 +1,14 @@
 export default function HomeAbout() {
   return (
-    <section className="md:p-12 p-6 text-complementary">
-      <h1 className="md:text-4xl text-2xl font-bold my-4">About MRUHacks</h1> {/* !change */}
+    <section className="md:p-12 p-6 text-primary">
+      <h1 className="md:text-4xl text-2xl font-bold my-4 text-complementary">About MRUHacks</h1>
       <div className="md:text-base text-sm">
-        HackPortal is a platform for user-friendly hackathon event management. <br />
-        <br />A few of its features include: A fully customizable front end, sign in with email/
-        Google, hacker registration, images, challenges, sponsors, FAQ and more fetched from
-        backend, push notifications, a spotlight carousel highlighting ongoing events, QR code check
-        in and swag claims, report submission/ Ask a question, a built-in and easy to set up
-        schedule, Hacker, Admin, and Super Admin roles, an Admin console to send announcements,
-        update user roles, show number of check-ins, swag claims, and more!. <br />
-        <br />
-        To set up HackPortal for your hackathon, check out the{' '}
-        <a
-          href="https://github.com/acmutd/hackportal/blob/develop/docs/set-up.md"
-          className="underline"
-        >
-          HackPortal Github
-        </a>
-        !
+        Every October, join 150+ hackers in the Riddell Library and Learning Center for a hackathon
+        experience like no other. Discover a community of like-minded designers, developers,
+        programmers, and tech enthusiasts. Connect and engage with industry mentors from a variety
+        of fields. At MRUHacks, the participant experience comes first. Experience engaging
+        workshops, exciting activities before and during the event, and have the chance to network
+        with not only companies, but your fellow hackers.
       </div>
     </section>
   );

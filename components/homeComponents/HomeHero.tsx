@@ -5,12 +5,12 @@ export default function HomeHero() {
   const router = useRouter();
 
   return (
-    <section className="min-h-screen p-4 bg-contain bg-white">
+    <>
       <div
         style={{ minHeight: 480 }}
         className="max-w-4xl mx-auto flex flex-col justify-center items-center"
       >
-        <h1 className="text-center md:text-8xl text-6xl font-bold text-primary">MRUHacks</h1>{' '}
+        <h1 className="text-center md:text-8xl text-6xl font-bold text-primary">MRUHacks 2024</h1>{' '}
         {/* !change */}
         <p className="text-center my-4 font-semibold md:text-xl text-md text-secondary opacity-80">
           {' '}
@@ -19,7 +19,7 @@ export default function HomeHero() {
       </div>
       {/* TODO: Programmatically show these based on configured times/organizer preference */}
 
-      <div className="flex flex-col items-center md:flex-row md:justify-around px-44 md:space-y-0 space-y-3 > *">
+      {/* <div className="flex flex-col items-center md:flex-row md:justify-around px-44 md:space-y-0 space-y-3 > *">
         {buttonDatas.map((button) => (
           <button
             key={button.text}
@@ -29,7 +29,7 @@ export default function HomeHero() {
             {button.text}
           </button>
         ))}
-      </div>
-    </section>
+      </div> */}
+    </>
   );
 }

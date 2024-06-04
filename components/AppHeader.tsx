@@ -126,7 +126,7 @@ export default function AppHeader() {
         </div>
         <div className="flex flex-row justify-center items-center order-2 md:order-3">
           <button
-            className="font-header font-bold bg-secondary rounded-full text-primaryDark text-sm xl:px-10 md:px-6 px-10 py-1 hover:bg-primaryDark hover:text-secondary transition duration-300 ease-in-out"
+            className="font-header font-bold bg-complementary rounded-full text-white text-sm xl:px-10 md:px-6 px-10 py-1 hover:bg-white hover:text-complementary transition duration-300 ease-in-out"
             onClick={toggleDialog}
           >
             {!user || !isSignedIn ? 'Sign in' : hasProfile ? 'Profile' : 'Register'}

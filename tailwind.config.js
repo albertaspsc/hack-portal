@@ -11,6 +11,7 @@ module.exports = {
         secondaryDark: '#BABFFF',
         complementary: '#0062FF',
         complementaryDark: '#252427',
+        background: '#e4e4e7',
       },
       fontFamily: {
         sans: ['Roboto', 'Roboto Mono', 'sans-serif'],

@@ -35,7 +35,7 @@ export default function HomeNotif() {
       <div
         id="popup"
         ref={popup}
-        className="fixed z-50 md:translate-x-0 translate-x-1/2 flex md:w-[22rem] w-[20rem] rounded-b-md px-4 py-2 top-20 md:right-6 right-1/2 md:text-base text-sm border-t-8 border-primaryDark bg-secondary"
+        className="fixed z-50 md:translate-x-0 translate-x-1/2 flex md:w-[22rem] w-[20rem] rounded-b-md px-4 py-2 top-20 md:right-6 right-1/2 md:text-base text-sm border-t-8 border-primary bg-background"
       >
         <svg
           className="fill-current md:h-6 h-5 md:w-6 w-5 text-primary mr-4"
