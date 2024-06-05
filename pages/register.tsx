@@ -32,7 +32,7 @@ export default function Register({ allowedRegistrations }: RegisterPageProps) {
     registrationFields: {
       generalQuestions,
       schoolQuestions,
-      hackathonExperienceQuestions,
+      // hackathonExperienceQuestions,
       eventInfoQuestions,
       sponsorInfoQuestions,
     },
@@ -183,7 +183,7 @@ export default function Register({ allowedRegistrations }: RegisterPageProps) {
   };
 
   return (
-    <div className="flex flex-col flex-grow bg-secondary">
+    <div className="flex flex-col flex-grow bg-background">
       <Head>
         <title>Hacker Registration</title>
         <meta name="description" content="Register for MRUHacks 2024" />
@@ -217,12 +217,12 @@ export default function Register({ allowedRegistrations }: RegisterPageProps) {
             for (let obj of schoolQuestions) {
               errors = setErrors(obj, values, errors);
             }
-            for (let obj of hackathonExperienceQuestions) {
-              errors = setErrors(obj, values, errors);
-            }
-            for (let obj of eventInfoQuestions) {
-              errors = setErrors(obj, values, errors);
-            }
+            // for (let obj of hackathonExperienceQuestions) {
+            //   errors = setErrors(obj, values, errors);
+            // }
+            // for (let obj of eventInfoQuestions) {
+            //   errors = setErrors(obj, values, errors);
+            // }
             for (let obj of sponsorInfoQuestions) {
               errors = setErrors(obj, values, errors);
             }
@@ -314,7 +314,7 @@ export default function Register({ allowedRegistrations }: RegisterPageProps) {
               )}
 
               {/* Hackathon Questions */}
-              {registrationSection == 2 && (
+              {/* {registrationSection == 2 && (
                 <section className="bg-white lg:w-3/5 md:w-3/4 w-full min-h-[35rem] mx-auto rounded-2xl md:py-10 py-6 px-8 mb-8 text-[#4C4950]">
                   <h2 className="sm:text-2xl text-xl font-semibold sm:mb-3 mb-1">
                     Hackathon Experience
@@ -330,10 +330,10 @@ export default function Register({ allowedRegistrations }: RegisterPageProps) {
                     ))}
                   </div>
                 </section>
-              )}
+              )} */}
 
               {/* Event Questions */}
-              {registrationSection == 3 && (
+              {/* {registrationSection == 3 && (
                 <section className="bg-white lg:w-3/5 md:w-3/4 w-full min-h-[35rem] mx-auto rounded-2xl md:py-10 py-6 px-8 mb-8 text-[#4C4950]">
                   <h2 className="sm:text-2xl text-xl font-semibold sm:mb-3 mb-1">Event Info</h2>
                   <div className="flex flex-col">
@@ -347,10 +347,10 @@ export default function Register({ allowedRegistrations }: RegisterPageProps) {
                     ))}
                   </div>
                 </section>
-              )}
+              )} */}
 
               {/* Sponsor Questions */}
-              {registrationSection == 4 && (
+              {registrationSection == 2 && (
                 <section className="bg-white lg:w-3/5 md:w-3/4 w-full min-h-[35rem] mx-auto rounded-2xl md:py-10 py-6 px-8 mb-8 text-[#4C4950]">
                   <h2 className="sm:text-2xl text-xl font-semibold sm:mb-3 mb-1">Sponsor Info</h2>
                   <div className="flex flex-col">
@@ -421,7 +421,7 @@ export default function Register({ allowedRegistrations }: RegisterPageProps) {
             </div>
           )}
 
-          {registrationSection < 4 && (
+          {registrationSection < 2 && (
             <div
               className="lg:fixed 2xl:bottom-8 2xl:right-8 bottom-6 right-6 inline cursor-pointer select-none"
               onClick={() => {

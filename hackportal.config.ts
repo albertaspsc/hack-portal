@@ -139,6 +139,69 @@ export const hackPortalConfig: HackPortalConfig = {
           },
         ],
       },
+      {
+        checkboxQuestions: [
+          {
+            //Allergies question
+            question: 'Allergies / Dietary Restrictions:',
+            required: false,
+            id: 'dietary',
+            name: 'dietary',
+            initialValue: [],
+            options: [
+              {
+                title: 'Halal',
+                value: 'Halal',
+              },
+              {
+                title: 'Kosher',
+                value: 'Kosher',
+              },
+              {
+                title: 'Vegan',
+                value: 'Vegan',
+              },
+              {
+                title: 'Vegetarian',
+                value: 'Vegetarian',
+              },
+              {
+                title: 'Nuts',
+                value: 'Nuts',
+              },
+              {
+                title: 'Fish',
+                value: 'Fish',
+              },
+              {
+                title: 'Wheat',
+                value: 'Wheat',
+              },
+              {
+                title: 'Dairy',
+                value: 'Dairy',
+              },
+              {
+                title: 'Eggs',
+                value: 'Eggs',
+              },
+            ],
+          },
+        ],
+      },
+      {
+        textAreaQuestions: [
+          {
+            //Accomodations question
+            question: 'Anything else we can do to better accommodate you at our hackathon?',
+            id: 'accomodations',
+            name: 'accomodations',
+            required: false,
+            initialValue: '',
+            placeholder: 'List any accessibility concerns here',
+          },
+        ],
+      },
     ],
     //Question Topic
     schoolQuestions: [
@@ -207,9 +270,6 @@ export const hackPortalConfig: HackPortalConfig = {
           },
         ],
       },
-    ],
-    //Question Topic
-    hackathonExperienceQuestions: [
       {
         numberInputQuestions: [
           {
@@ -255,7 +315,7 @@ export const hackPortalConfig: HackPortalConfig = {
           },
           {
             //Heard from question
-            question: 'Where did you hear about MRU Hacks?',
+            question: 'Where did you hear about MRUHacks?',
             required: true,
             id: 'heardFrom',
             name: 'heardFrom',
@@ -292,104 +352,43 @@ export const hackPortalConfig: HackPortalConfig = {
             ],
           },
         ],
+        //Question Topic
+        // hackathonExperienceQuestions: [],
       },
     ],
-    //Question Topic
-    eventInfoQuestions: [
-      {
-        dropdownQuestions: [
-          {
-            //Shirt size question
-            question: 'Shirt Size',
-            required: true,
-            id: 'size',
-            name: 'size',
-            initialValue: '',
-            options: [
-              {
-                title: 'S',
-                value: 's',
-              },
-              {
-                title: 'M',
-                value: 'm',
-              },
-              {
-                title: 'L',
-                value: 'l',
-              },
-              {
-                title: 'XL',
-                value: 'xl',
-              },
-            ],
-          },
-        ],
-      },
-      {
-        checkboxQuestions: [
-          {
-            //Allergies question
-            question: 'Allergies / Dietary Restrictions:',
-            required: false,
-            id: 'dietary',
-            name: 'dietary',
-            initialValue: [],
-            options: [
-              {
-                title: 'Halal',
-                value: 'Halal',
-              },
-              {
-                title: 'Kosher',
-                value: 'Kosher',
-              },
-              {
-                title: 'Vegan',
-                value: 'Vegan',
-              },
-              {
-                title: 'Vegetarian',
-                value: 'Vegetarian',
-              },
-              {
-                title: 'Nuts',
-                value: 'Nuts',
-              },
-              {
-                title: 'Fish',
-                value: 'Fish',
-              },
-              {
-                title: 'Wheat',
-                value: 'Wheat',
-              },
-              {
-                title: 'Dairy',
-                value: 'Dairy',
-              },
-              {
-                title: 'Eggs',
-                value: 'Eggs',
-              },
-            ],
-          },
-        ],
-      },
-      {
-        textAreaQuestions: [
-          {
-            //Accomodations question
-            question: 'Anything else we can do to better accommodate you at our hackathon?',
-            id: 'accomodations',
-            name: 'accomodations',
-            required: false,
-            initialValue: '',
-            placeholder: 'List any accessibility concerns here',
-          },
-        ],
-      },
-    ],
+    // //Question Topic
+    // eventInfoQuestions: [
+    //   {
+    //     dropdownQuestions: [
+    //       {
+    //         //Shirt size question
+    //         question: 'Shirt Size',
+    //         required: true,
+    //         id: 'size',
+    //         name: 'size',
+    //         initialValue: '',
+    //         options: [
+    //           {
+    //             title: 'S',
+    //             value: 's',
+    //           },
+    //           {
+    //             title: 'M',
+    //             value: 'm',
+    //           },
+    //           {
+    //             title: 'L',
+    //             value: 'l',
+    //           },
+    //           {
+    //             title: 'XL',
+    //             value: 'xl',
+    //           },
+    //         ],
+    //       },
+    //     ],
+    //   },
+    // ],
     //Question Topic
     sponsorInfoQuestions: [
       {
@@ -424,31 +423,19 @@ export const hackPortalConfig: HackPortalConfig = {
         checkboxQuestions: [
           {
             //Companies question
-            question: 'Companies to send my resume to:',
+            question: 'Do you want us to distribute your information to sponsors?:',
             required: false,
             id: 'companies',
             name: 'companies',
             initialValue: [],
             options: [
               {
-                title: 'State Farm',
-                value: 'State Farm',
+                title: 'Yes',
+                value: 'Yes',
               },
               {
-                title: 'American Airlines',
-                value: 'American Airlines',
-              },
-              {
-                title: 'Capital One',
-                value: 'Capital One',
-              },
-              {
-                title: 'Ebay',
-                value: 'Ebay',
-              },
-              {
-                title: 'Facebook',
-                value: 'Facebook',
+                title: 'No',
+                value: 'No',
               },
             ],
           },
@@ -482,7 +469,7 @@ export const fieldNames = {
   age: 'Age',
   ethnicity: 'Ethnicity',
   race: 'Race',
-  size: 'Shirt Size',
+  // size: 'Shirt Size',
   softwareExperience: 'Software Experience',
   studyLevel: 'Study Level',
   university: 'University',
@@ -502,7 +489,7 @@ export const singleField = [
   'age',
   'ethnicity',
   'race',
-  'size',
+  // 'size',
   'softwareExperience',
   'studyLevel',
   'university',
@@ -516,8 +503,8 @@ export interface HackPortalConfig {
   registrationFields: {
     generalQuestions: QuestionTypes[];
     schoolQuestions: QuestionTypes[];
-    hackathonExperienceQuestions: QuestionTypes[];
-    eventInfoQuestions: QuestionTypes[];
+    // hackathonExperienceQuestions: QuestionTypes[];
+    // eventInfoQuestions: QuestionTypes[];
     sponsorInfoQuestions: QuestionTypes[];
   };
 }
@@ -580,12 +567,12 @@ const getInitialValues = () => {
   for (let obj of hackPortalConfig.registrationFields.schoolQuestions) {
     setInitialValues(obj);
   }
-  for (let obj of hackPortalConfig.registrationFields.hackathonExperienceQuestions) {
-    setInitialValues(obj);
-  }
-  for (let obj of hackPortalConfig.registrationFields.eventInfoQuestions) {
-    setInitialValues(obj);
-  }
+  // for (let obj of hackPortalConfig.registrationFields.hackathonExperienceQuestions) {
+  //   setInitialValues(obj);
+  // }
+  // for (let obj of hackPortalConfig.registrationFields.eventInfoQuestions) {
+  //   setInitialValues(obj);
+  // }
   for (let obj of hackPortalConfig.registrationFields.sponsorInfoQuestions) {
     setInitialValues(obj);
   }
