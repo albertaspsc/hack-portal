@@ -47,14 +47,13 @@ export default function Home(props: {
         <meta name="description" content="A default HackPortal instance" /> {/* !change */}
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
       <HomeNotif />
       <HomeHero />
       {/*      <HomeVideoStats /> */}
       <HomeAbout />
-      <HomeSpeakers keynoteSpeakers={props.keynoteSpeakers} />
+      {/*      <HomeSpeakers keynoteSpeakers={props.keynoteSpeakers} /> */}
       <HomeChallenges challenges={props.challenges} />
-      <HomeTeam members={props.fetchedMembers} />
+      {/* <HomeTeam members={props.fetchedMembers} /> */}
       <HomeSponsors sponsorCard={props.sponsorCard} />
       <HomeFooter />
     </>

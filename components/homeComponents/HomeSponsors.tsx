@@ -21,17 +21,17 @@ export default function HomeSponsors(props: { sponsorCard: Sponsor[] }) {
               ))}
             </div>
           </section>
-          <h2 className="my-2 text-center">
+          <h2 className="my-2 text-center text-primary">
             {' '}
             {/* !change */}
             If you would like to sponsor MRUHacks, please reach out to us at&nbsp;
             <a
-              href="mailto:email@organization.com"
+              href="mailto:outreach@mruhacks.ca"
               rel="noopener noreferrer"
               target="_blank"
               className="underline"
             >
-              email@organization.com
+              outreach@mruhacks.ca
             </a>
           </h2>
         </div>

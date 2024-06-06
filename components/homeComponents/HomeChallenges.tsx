@@ -65,8 +65,9 @@ export default function HomeChallenges(props: { challenges: Challenge[] }) {
       <section className="md:py-12 py-6 xl:w-9/10 w-11/12 m-auto">
         <div className="font-bold md:text-4xl text-2xl my-4 text-complementary">Challenges</div>
         {/* Challenge Orgs Selectors*/}
-        <div className="relative mt-4 sm:w-[95%] w-[85%] mx-auto">
-          <Swiper
+        <div className="relative mt-4 sm:w-[95%] w-[85%] mx-auto text-primary">
+          Challenges will be announced closer to the event, so stay tuned!
+          {/*         <Swiper
             modules={[Navigation, A11y, Pagination]}
             spaceBetween={10}
             allowTouchMove={false}
@@ -122,9 +123,9 @@ export default function HomeChallenges(props: { challenges: Challenge[] }) {
           </div>
           <div className="translate-x-12 -translate-y-32">
             <div className="swiper-button-next" />
-          </div>
+          </div> */}
           {/* Challenges Description Cards */}
-          <div className="my-4">
+          {/* <div className="my-4">
             {showChallengeCard && (
               <HomeChallengeCard
                 title={challengeData.title}
@@ -136,7 +137,7 @@ export default function HomeChallenges(props: { challenges: Challenge[] }) {
           </div>
           <div className="block md:hidden translate-y-8">
             <div className="swiper-pagination"></div>
-          </div>
+          </div> */}
         </div>
       </section>
     )
