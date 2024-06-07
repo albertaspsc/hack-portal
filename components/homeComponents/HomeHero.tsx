@@ -1,20 +1,17 @@
 import { useRouter } from 'next/router';
 import { buttonDatas } from '../../lib/data';
-
+import Image from 'next/image';
 export default function HomeHero() {
   const router = useRouter();
 
   return (
     <>
-      <div
-        style={{ minHeight: 480 }}
-        className="max-w-4xl mx-auto flex flex-col justify-center items-center"
-      >
-        <h1 className="text-center md:text-8xl text-6xl font-bold text-primary">MRUHacks 2024</h1>{' '}
-        {/* !change */}
-        <p className="text-center my-4 font-semibold md:text-xl text-md text-secondary opacity-80">
+      <div className="min-h-screen max-w-4xl py-8 mx-auto flex flex-col justify-center items-center">
+        <Image src="/assets/hero.jpg" alt="" layout="fill" className="object-cover opacity-80" />
+        <Image src="/assets/2024.png" alt="MRUHacks 2024" width={2342} height={743} />
+        <p className="relative text-center my-4 py-8 font-semibold md:text-xl text-md text-white">
           {' '}
-          {/* !change */}Enabling students to dream, design, and develop their future!
+          {/* !change */}24 Hours of Collaboration, Coding and Connections!
         </p>
       </div>
       {/* TODO: Programmatically show these based on configured times/organizer preference */}

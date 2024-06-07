@@ -1,7 +1,9 @@
 export default function HomeAbout() {
   return (
-    <section className="md:p-12 p-6 text-primary">
-      <h1 className="md:text-4xl text-2xl font-bold my-4 text-complementary">About MRUHacks</h1>
+    <section className="md:p-12 p-6 text-primary text-center">
+      <h1 className="md:text-4xl text-2xl font-bold my-4 text-primary-content">
+        About MRUHacks 2024
+      </h1>
       <div className="md:text-base text-sm">
         Every October, join 150+ hackers in the Riddell Library and Learning Center for a hackathon
         experience like no other. Discover a community of like-minded designers, developers,

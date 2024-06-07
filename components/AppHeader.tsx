@@ -74,7 +74,7 @@ export default function AppHeader() {
   return (
     <>
       <div className="min-h-[5rem]"></div>
-      <header className="top-0 fixed justify-between flex flex-row w-full bg-white items-center h-20 z-10 lg:px-4 px-2 drop-shadow">
+      <header className="top-0 fixed justify-between flex flex-row w-full bg-primary items-center h-20 z-10 lg:px-4 px-2 drop-shadow">
         <div className="flex flex-row order-1 md:order-none items-center">
           {/* Smartphone nav */}
           <div onClick={toggleMenu} className="md:hidden cursor-pointer text-complementary">
@@ -88,7 +88,7 @@ export default function AppHeader() {
                 .filter(({ text }) => text !== 'Home')
                 .map((item) => (
                   <Link key={item.text} href={item.path}>
-                    <a className="p-9 py-6 hover:bg-primaryDark hover:text-white text-complementary">
+                    <a className="p-9 py-6 hover:bg-primary hover:text-base-100 text-complementary bg-base-100">
                       <p className="text-xl font-medium">{item.text}</p>
                     </a>
                   </Link>
@@ -99,7 +99,7 @@ export default function AppHeader() {
             <a className="flex gap-2 ml-[6px] font-display self-center items-center md:ml-0">
               {/* !change src */}
               <Image
-                src={'/assets/mru_title_dark.png'}
+                src={'/assets/mru_title_light.png'}
                 width={236}
                 height={75}
                 alt="MRUHacks logo"
@@ -109,13 +109,13 @@ export default function AppHeader() {
         </div>
 
         {/* PC nav */}
-        <div className="hidden order-2 md:flex items-center md:text-center lg:ml-12 text-complementary space-x-6 lg:space-x-12 h-full">
+        <div className="hidden order-2 md:flex items-center md:text-center lg:ml-12 text-base-100 space-x-6 lg:space-x-12 h-full">
           {dynamicNavItems.map((item) => (
             <NavLink
               key={item.text}
               href={item.path}
               exact={item.text == 'Home' ? true : false}
-              activeOptions={'2xl:border-b-[6px] border-b-4 border-primaryDark'}
+              activeOptions={'2xl:border-b-[6px] border-b-4 border-complementary'}
               className="h-full"
             >
               <div className="2xl:mx-4 lg:mx-2 md:mx-0 2xl:text-lg lg:text-base text-sm font-bold flex items-center h-full">

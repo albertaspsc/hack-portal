@@ -167,10 +167,10 @@ export default function QuestionsPage() {
         }}
       />
       <div className="lg:mt-12 mt-8 flex flex-col gap-y-3">
-        <h4 className="font-bold text-3xl text-complementary">Ask the organizers a question!</h4>
+        <h4 className="font-bold text-3xl text-primary">Ask the organizers a question!</h4>
         <div>
           <textarea
-            className="w-full rounded-xl p-4 bg-white border-transparent focus:border-primaryDark caret-primaryDark"
+            className="w-full rounded-xl p-4 bg-white border-2 border-primary focus:border-primaryDark caret-primaryDark"
             rows={5}
             value={currentQuestion}
             onChange={(e) => setCurrentQuestion(e.target.value)}
@@ -179,7 +179,7 @@ export default function QuestionsPage() {
           <div className="flex flex-row justify-end my-4">
             <button
               type="button"
-              className="p-2 rounded-lg hover:bg-secondary bg-primaryDark text-secondary hover:text-primaryDark border-[1px] border-transparent hover:border-primaryDark transition duration-300 ease-in-out"
+              className="p-2 rounded-lg hover:bg-base-100 bg-complementary text-base-100 hover:text-primary border-[1px] border-transparent hover:border-primaryDark transition duration-300 ease-in-out"
               onClick={() => {
                 submitQuestion();
               }}
@@ -190,7 +190,7 @@ export default function QuestionsPage() {
         </div>
 
         <div>
-          <h4 className="font-bold text-2xl text-complementary">My Pending Questions</h4>
+          <h4 className="font-bold text-2xl text-primary">My Pending Questions</h4>
           {user ? (
             pendingQuestions.map(({ question }, idx) => (
               <PendingQuestion key={idx} question={question} />
@@ -201,7 +201,7 @@ export default function QuestionsPage() {
         </div>
 
         <div className="my-4">
-          <h4 className="font-bold text-2xl text-complementary">My Answered Questions</h4>
+          <h4 className="font-bold text-2xl text-primary">My Answered Questions</h4>
           {user ? (
             answeredQuestions.map(({ question, answer }, idx) => (
               <AnsweredQuestion

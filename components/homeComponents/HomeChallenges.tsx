@@ -62,10 +62,10 @@ export default function HomeChallenges(props: { challenges: Challenge[] }) {
 
   return (
     challenges.length != 0 && (
-      <section className="md:py-12 py-6 xl:w-9/10 w-11/12 m-auto">
-        <div className="font-bold md:text-4xl text-2xl my-4 text-complementary">Challenges</div>
+      <section className="md:py-12 py-6 xl:w-9/10 w-11/12 text-center m-auto">
+        <div className="font-bold md:text-4xl text-2xl my-4 text-primary-content">Challenges</div>
         {/* Challenge Orgs Selectors*/}
-        <div className="relative mt-4 sm:w-[95%] w-[85%] mx-auto text-primary">
+        <div className="relative flex flex-col mt-4 sm:w-[95%] w-[85%] m-auto text-primary">
           Challenges will be announced closer to the event, so stay tuned!
           {/*         <Swiper
             modules={[Navigation, A11y, Pagination]}

@@ -92,20 +92,18 @@ export default function Admin({ questions }: { questions: QADocument[] }) {
               <SuccessCard msg="Announcement posted successfully" />
             </div>
           )}
-          <h1 className="font-bold lg:text-3xl text-2xl text-complementary mb-4">
-            Post Announcement:{' '}
-          </h1>
+          <h1 className="font-bold lg:text-3xl text-2xl text-primary mb-4">Post Announcement: </h1>
           <textarea
             value={announcement}
             onChange={(e) => setAnnouncement(e.target.value)}
-            className="w-full rounded-xl p-4 bg-white border-gray-500 focus:border-primaryDark caret-primaryDark"
+            className="w-full rounded-xl p-4 bg-white border-primary border-2 focus:border-primary caret-primary"
             placeholder="Type your announcement here"
             rows={5}
           ></textarea>
           <div className="flex flex-row justify-end my-4">
             <button
               type="button"
-              className="py-1 px-7 rounded-lg font-bold hover:bg-primary bg-secondary text-white hover:text-black border-[1px] border-transparent hover:border-primaryDark transition duration-300 ease-in-out"
+              className="py-1 px-7 rounded-lg font-bold hover:bg-primary bg-complementary text-base-100 hover:text-black border-[1px] border-transparent hover:border-primaryDark transition duration-300 ease-in-out"
               onClick={() => {
                 postAnnouncement();
               }}
@@ -116,7 +114,7 @@ export default function Admin({ questions }: { questions: QADocument[] }) {
         </div>
       )}
       <div className="2xl:px-32 md:px-16 px-6">
-        <h1 className="font-bold text-xl text-complementary">Pending Questions: </h1>
+        <h1 className="font-bold text-xl text-primary">Pending Questions: </h1>
         {questions.map((question, idx) => (
           <Link key={idx} passHref href={`/admin/resolve/${question.id}`}>
             <a>

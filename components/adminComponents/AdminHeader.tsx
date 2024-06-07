@@ -36,7 +36,7 @@ export default function AdminHeader() {
           <NavLink
             href="/admin"
             exact={true}
-            activeOptions={'border-b-4 border-primaryDark text-complementaryDark'}
+            activeOptions={'border-b-4 border-primary text-primary-content'}
             className="mr-4 py-2"
           >
             Event Dashboard
@@ -44,7 +44,7 @@ export default function AdminHeader() {
           <NavLink
             href="/admin/scan"
             exact={true}
-            activeOptions={'border-b-4 border-primaryDark text-complementaryDark'}
+            activeOptions={'border-b-4 border-primary text-primary-content'}
             className="mx-4 py-2"
           >
             Scanner
@@ -52,7 +52,7 @@ export default function AdminHeader() {
           <NavLink
             href="/admin/users"
             exact={true}
-            activeOptions={'border-b-4 border-primaryDark text-complementaryDark'}
+            activeOptions={'border-b-4 border-primary text-primary-content'}
             className="mx-4 py-2"
           >
             User Dashboard
@@ -61,7 +61,7 @@ export default function AdminHeader() {
             <NavLink
               href="/admin/stats"
               exact={true}
-              activeOptions={'border-b-4 border-primaryDark text-complementaryDark'}
+              activeOptions={'border-b-4 border-primary text-primary-content'}
               className="ml-4 py-2"
             >
               Stats at a Glance

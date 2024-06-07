@@ -47,14 +47,16 @@ export default function FaqPage({ fetchedFaqs }: { fetchedFaqs: AnsweredQuestion
   return (
     <div className="flex flex-col flex-grow">
       <Head>
-        <title>HackPortal</title>
-        <meta name="description" content="HackPortal's Frequently Asked Questions" />
+        <title>MRUHacks 2024</title>
+        <meta name="description" content="MRUHacks Frequently Asked Questions" />
       </Head>
       {/* <AboutHeader active="/about/faq" /> */}
       <div className="top-6">
-        <div className="flex flex-row justify-between items-center py-2">
-          <h4 className="font-bold md:text-4xl text-2xl my-4 text-complementary">FAQ</h4>
-          <div className="flex flex-row items-center gap-x-2">
+        <div className="flex flex-row justify-between items-center py-2 m-auto">
+          <h4 className="font-bold md:text-4xl text-2xl my-4 text-primary-content m-auto">
+            Frequently Asked Questions
+          </h4>
+          {/* <div className="flex flex-row items-center gap-x-2">
             <button
               onClick={() => {
                 if (disclosuresStatus.every((status) => status)) {
@@ -68,36 +70,32 @@ export default function FaqPage({ fetchedFaqs }: { fetchedFaqs: AnsweredQuestion
               {disclosuresStatus.every((status) => status) ? 'Close All' : 'Expand All'}
             </button>
             <ChevronDownIcon
-              className={`${
-                disclosuresStatus.every((status) => status)
-                  ? 'transform rotate-180 transition duration-500 ease-in-out'
-                  : 'transition duration-500 ease-in-out'
-              } w-5 h-5`}
+              className={`${disclosuresStatus.every((status) => status)
+                ? 'transform rotate-180 transition duration-500 ease-in-out'
+                : 'transition duration-500 ease-in-out'
+                } w-5 h-5`}
             />
-          </div>
+          </div> */}
         </div>
         {/* FAQ for lg-md */}
         {/* Uses different section for mobile because using 2 columns is buggy when expanding FAQs */}
         <div className="md:flex hidden justify-between p-6">
-          <div className="w-[49%] my-3 space-y-4 > * + *">
-            {faqs.map(
-              ({ question, answer }, idx) =>
-                idx % 2 == 0 && (
-                  <FaqDisclosure
-                    key={idx}
-                    question={question}
-                    answer={answer}
-                    isOpen={disclosuresStatus[idx]}
-                    toggleDisclosure={() => {
-                      const currDisclosure = [...disclosuresStatus];
-                      currDisclosure[idx] = !currDisclosure[idx];
-                      setDisclosureStatus(currDisclosure);
-                    }}
-                  />
-                ),
-            )}
+          <div className="w-4/5 my-3 space-y-4 m-auto bg-primary p-8 rounded-2xl > * + *">
+            {faqs.map(({ question, answer }, idx) => (
+              <FaqDisclosure
+                key={idx}
+                question={question}
+                answer={answer}
+                isOpen={disclosuresStatus[idx]}
+                toggleDisclosure={() => {
+                  const currDisclosure = [...disclosuresStatus];
+                  currDisclosure[idx] = !currDisclosure[idx];
+                  setDisclosureStatus(currDisclosure);
+                }}
+              />
+            ))}
           </div>
-          <div className="w-[49%] my-3 space-y-4 > * + *">
+          {/* <div className="w-[49%] my-3 space-y-4 > * + *">
             {faqs.map(
               ({ question, answer }, idx) =>
                 idx % 2 != 0 && (
@@ -114,7 +112,7 @@ export default function FaqPage({ fetchedFaqs }: { fetchedFaqs: AnsweredQuestion
                   />
                 ),
             )}
-          </div>
+          </div> */}
         </div>
         {/* FAQ for mobile */}
         <div className="md:hidden">

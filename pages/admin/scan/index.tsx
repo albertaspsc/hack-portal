@@ -554,7 +554,7 @@ export default function Admin() {
               user.permissions.includes('super_admin') && (
                 <div className="mx-auto my-5">
                   <button
-                    className="py-3 px-4 font-bold rounded-lg hover:bg-secondary bg-primaryDark text-secondary hover:text-primaryDark border-[1px] border-transparent hover:border-primaryDark transition duration-300 ease-in-out"
+                    className="py-3 px-4 font-bold rounded-lg hover:bg-base-100 bg-primary text-base-100 hover:text-primary border-[1px] border-transparent hover:border-primaryDark transition duration-300 ease-in-out"
                     onClick={() => {
                       if (!user.permissions.includes('super_admin')) {
                         alert('You do not have the required permission to use this functionality');

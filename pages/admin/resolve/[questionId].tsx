@@ -76,7 +76,7 @@ export default function ResolveQuestionPage({
       />
       <PendingQuestion question={question.question} />
       <textarea
-        className="w-full rounded-xl p-4 bg-secondary border-transparent focus:border-primaryDark caret-primaryDark"
+        className="w-full rounded-xl p-4 bg-base-100 border-primary border-2 focus:border-primary caret-primary"
         rows={5}
         value={answer}
         onChange={(e) => setAnswer(e.target.value)}
@@ -85,7 +85,7 @@ export default function ResolveQuestionPage({
       <div className="flex flex-row justify-end my-4">
         <button
           type="button"
-          className="p-2 rounded-lg font-medium hover:bg-secondary bg-primaryDark text-secondary hover:text-primaryDark border-[1px] border-transparent hover:border-primaryDark transition duration-300 ease-in-out"
+          className="p-2 rounded-lg font-medium hover:bg-base-100 bg-complementary text-base-100 hover:text-primary border-[1px] border-transparent hover:border-primaryDark transition duration-300 ease-in-out"
           onClick={() => {
             submitAnswer();
           }}

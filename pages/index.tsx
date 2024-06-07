@@ -63,10 +63,12 @@ export default function Home(props: {
 
 export const getServerSideProps: GetServerSideProps = async (context) => {
   const protocol = context.req.headers.referer?.split('://')[0] || 'http';
-  const { data: keynoteData } = await RequestHelper.get<KeynoteSpeaker[]>(
+  {
+    /* const { data: keynoteData } = await RequestHelper.get<KeynoteSpeaker[]>(
     `${protocol}://${context.req.headers.host}/api/keynotespeakers`,
     {},
-  );
+  ) */
+  }
   const { data: challengeData } = await RequestHelper.get<Challenge[]>(
     `${protocol}://${context.req.headers.host}/api/challenges/`,
     {},
@@ -75,20 +77,22 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
     `${protocol}://${context.req.headers.host}/api/questions/faq`,
     {},
   );
-  const { data: memberData } = await RequestHelper.get<TeamMember[]>(
+  {
+    /* const { data: memberData } = await RequestHelper.get<TeamMember[]>(
     `${protocol}://${context.req.headers.host}/api/members`,
     {},
-  );
+  ) */
+  }
   const { data: sponsorData } = await RequestHelper.get<Sponsor[]>(
     `${protocol}://${context.req.headers.host}/api/sponsor`,
     {},
   );
   return {
     props: {
-      keynoteSpeakers: keynoteData,
+      // keynoteSpeakers: keynoteData,
       challenges: challengeData,
       answeredQuestion: answeredQuestion,
-      fetchedMembers: memberData,
+      // fetchedMembers: memberData,
       sponsorCard: sponsorData,
     },
   };

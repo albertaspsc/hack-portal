@@ -9,10 +9,12 @@ import React from 'react';
 function AnouncementCard(props) {
   return (
     <>
-      <div id="announcement-content" className="md:min-h-1/4 rounded-lg p-3 bg-white">
+      <div id="announcement-content" className="md:min-h-1/4 rounded-lg p-3 bg-base-100">
         {props.text}
       </div>
-      <p className="text-right">{props.time}</p>
+      <p className="text-right">
+        {props.date} @ {props.time}
+      </p>
     </>
   );
 }

@@ -35,7 +35,7 @@ export default function AllUsersAdminView({
           <div className="relative icon flex flex-row justify-center items-center w-full lg:w-1/2">
             <input
               type="text"
-              className="absolute rounded-lg bg-secondary w-full border-none text-complementary placeholder:text-complementary/70"
+              className="absolute rounded-lg bg-base-100 w-full border-none text-primary placeholder:text-primary/70"
               placeholder="Search Users"
               value={searchQuery}
               onChange={(e) => {
@@ -43,7 +43,7 @@ export default function AllUsersAdminView({
               }}
             />
             <div className="absolute right-4">
-              <SearchIcon className="w-6 h-6 text-complementary" />
+              <SearchIcon className="w-6 h-6 text-primary" />
             </div>
           </div>
 
@@ -63,12 +63,12 @@ export default function AllUsersAdminView({
               }}
             >
               <Tab.List className="flex flex-row justify-center items-center w-full">
-                <div className="bg-secondary rounded-full">
+                <div className="bg-base-100 rounded-full">
                   <Tab
                     className={`rounded-full ${
                       registrationState === RegistrationState.CLOSED
-                        ? 'bg-primaryDark text-secondary'
-                        : 'bg-secondary text-primaryDark'
+                        ? 'bg-complementary text-base-100'
+                        : 'bg-base-100 text-primary'
                     } py-2 px-4`}
                   >
                     Close Registration
@@ -76,8 +76,8 @@ export default function AllUsersAdminView({
                   <Tab
                     className={`rounded-full ${
                       registrationState === RegistrationState.OPEN
-                        ? 'bg-primaryDark text-secondary'
-                        : 'bg-secondary text-primaryDark'
+                        ? 'bg-complementary text-base-100'
+                        : 'bg-base-100 text-primary'
                     } py-2 px-4`}
                   >
                     Live Registration

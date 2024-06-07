@@ -6,12 +6,15 @@ module.exports = {
     extend: {
       colors: {
         primary: '#002766',
-        primaryDark: '#05149C',
-        secondary: '#FF00FF',
-        secondaryDark: '#BABFFF',
+        'primary-content': '#581188',
+        secondary: '#ff00ff',
         complementary: '#0062FF',
+        neutral: '#f2f2f2',
+        // Background Color
+        'base-100': '#e4e4e7',
+        primaryDark: '#05149C',
+        secondaryDark: '#BABFFF',
         complementaryDark: '#252427',
-        background: '#e4e4e7',
       },
       fontFamily: {
         sans: ['Roboto', 'Roboto Mono', 'sans-serif'],

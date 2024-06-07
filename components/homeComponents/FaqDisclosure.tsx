@@ -33,13 +33,13 @@ export default function FaqDisclosure({
     <Disclosure>
       <div className="transition duration-500 ease-in-out">
         <Disclosure.Button
-          className={`p-2 text-complementary font-medium text-left  w-full ${
-            isOpen ? '' : 'border-b-2 border-complementary transition duration-300 ease-in-out'
+          className={`p-2 text-base-100 font-semibold text-left  w-full ${
+            isOpen ? '' : 'border-b-2 border-base-100 transition duration-300 ease-in-out'
           }`}
           as="div"
         >
           <button
-            className="w-full flex flex-row justify-between items-center"
+            className="w-full flex flex-row justify-between items-center primary"
             onClick={() => {
               toggleDisclosure();
             }}
@@ -66,8 +66,10 @@ export default function FaqDisclosure({
           leaveTo="transform scale-95 opacity-0"
         >
           <Disclosure.Panel
-            className={`my-2 py-2  p-2 text-complementary text-left  ${
-              isOpen ? 'border-b-2 border-complementary transition duration-300 ease-in-out' : ''
+            className={`my-2 py-2  p-2 text-base-100 text-left  ${
+              isOpen
+                ? 'border-b-2 border-base-100 bg-primary transition duration-300 ease-in-out'
+                : ''
             }`}
             static
           >

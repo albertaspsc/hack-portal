@@ -31,7 +31,6 @@ import 'swiper/css/scrollbar';
 export default function Dashboard(props: {
   announcements: Announcement[];
   scheduleEvents: ScheduleEvent[];
-  challenges: Challenge[];
 }) {
   const { isSignedIn, hasProfile } = useAuthContext();
   const user = useUser();
@@ -39,12 +38,10 @@ export default function Dashboard(props: {
   const [announcements, setAnnouncements] = useState<Announcement[]>([]);
   const [dateTime, setdateTime] = useState(new Date());
   const [eventCount, setEventCount] = useState(0);
-  const [challenges, setChallenges] = useState<Challenge[]>([]);
 
   useEffect(() => {
     setAnnouncements(props.announcements);
     // ordering challenges as speficied in firebase
-    setChallenges(props.challenges.sort((a, b) => (a.rank > b.rank ? 1 : -1)));
     if (firebase.messaging.isSupported()) {
       firebase.messaging().onMessage((payload) => {
         setAnnouncements((prev) => [
@@ -88,10 +85,10 @@ export default function Dashboard(props: {
 
   return (
     <>
-      <div className="flex flex-wrap flex-grow">
+      <div className="flex flex-col flex-grow">
         <Head>
-          <title>MRUHacks 2024 - Dashboard</title> {/* !change */}
-          <meta name="description" content="HackPortal's Dashboard" />
+          <title>MRUHacks 2024 - Hacker Dashboard</title> {/* !change */}
+          <meta name="description" content="MRUHacks 2024 Hacker Dashboard" />
         </Head>
 
         <section id="mainContent" className="2xl:px-32 md:px-16 px-6 bg-white">
@@ -147,22 +144,36 @@ export default function Dashboard(props: {
                     minutes < 10 ? '0' : ''
                   }${minutes}`;
 
+                  const month = dateObj.getUTCMonth(),
+                    day = dateObj.getUTCDate(),
+                    year = dateObj.getUTCFullYear();
+
+                  let months = [
+                    'Jan',
+                    'Feb',
+                    'Mar',
+                    'Apr',
+                    'May',
+                    'June',
+                    'July',
+                    'Aug',
+                    'Sep',
+                    'Oct',
+                    'Nov',
+                    'Dec',
+                  ];
+                  let monthStr = months[month];
+                  const date = `${monthStr} ${day}, ${year}`;
                   return (
-                    <AnnouncementCard key={idx} text={announcement.announcement} time={time} />
+                    <AnnouncementCard
+                      key={idx}
+                      text={announcement.announcement}
+                      time={time}
+                      date={date}
+                    />
                   );
                 })}
               </div>
-            </div>
-          </div>
-
-          {/* Challenges */}
-          <div className="flex flex-col items-center my-8">
-            <h1 className="md:text-3xl text-xl font-black text-primary">Challenges</h1>
-            {/* Cards */}
-            <div className="challengeGrid my-8">
-              {challenges.map(({ title, description, prizes }, idx) => (
-                <ChallengeCard key={idx} title={title} description={description} prizes={prizes} />
-              ))}
             </div>
           </div>
         </section>

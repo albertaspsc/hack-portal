@@ -24,12 +24,12 @@ export default function DashboardHeader() {
 
   return (
     <section>
-      <header className="md:flex hidden justify-center item-center mt-8">
-        <div className="lg:text-3xl text-2xl text-center text-complementary font-semibold border-b-2 py-2">
+      <header className="hidden md:flex flex-row justify-center items-center mt-8">
+        <div className=" md:text-base lg:text-xl font-header md:text-left text-complementary font-semibold border-b-2 py-2">
           <NavLink
             href="/dashboard"
             exact={true}
-            activeOptions={'border-b-4 border-primary text-complementary'}
+            activeOptions={'border-b-4 border-primary text-primary-content'}
             className="xl:mr-6 mr-4 py-2"
           >
             HackCenter
@@ -37,7 +37,7 @@ export default function DashboardHeader() {
           <NavLink
             href="/dashboard/questions"
             exact={true}
-            activeOptions={'border-b-4 border-primary text-complementary'}
+            activeOptions={'border-b-4 border-primary text-primary-content'}
             className="xl:ml-6 ml-4 py-2"
           >
             Ask a Question
@@ -53,7 +53,7 @@ export default function DashboardHeader() {
           <p>Dashboard Menu</p>
           <ChevronRightIcon className={`${isOpen ? 'transform rotate-90' : ''} w-5 h-5`} />
         </button>
-        <div className="panel w-full bg-secondaryDark text-primary text-sm">
+        <div className="panel w-full bg-secondaryDark text-primaryDark text-sm">
           <ul className="">
             <li className="p-2 hover:bg-secondary cursor-pointer">
               <Link href="/dashboard" passHref>
