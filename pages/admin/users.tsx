@@ -316,7 +316,7 @@ export default function UserPage() {
       </Transition>
       <Head>
         <title>MRUHacks - Admin</title> {/* !change */}
-        <meta name="description" content="HackPortal's Admin Page" />
+        <meta name="description" content="MRUHacks 2024 Admin Page" />
       </Head>
       <section id="subheader" className="p-2 md:p-4">
         <AdminHeader />

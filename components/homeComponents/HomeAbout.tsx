@@ -1,7 +1,7 @@
 export default function HomeAbout() {
   return (
-    <section className="md:p-12 p-6 text-primary text-center">
-      <h1 className="md:text-4xl text-2xl font-bold my-4 text-primary-content">
+    <section className="md:p-12 p-6 text-primary text-center w-4/5 mx-auto">
+      <h1 className="md:text-4xl text-2xl font-bold my-4 text-primary-content pb-4">
         About MRUHacks 2024
       </h1>
       <div className="md:text-base text-sm">

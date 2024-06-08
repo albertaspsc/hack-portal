@@ -33,7 +33,7 @@ export default function Register({ allowedRegistrations }: RegisterPageProps) {
       generalQuestions,
       schoolQuestions,
       // hackathonExperienceQuestions,
-      eventInfoQuestions,
+      // eventInfoQuestions,
       sponsorInfoQuestions,
     },
   } = hackPortalConfig;
@@ -417,7 +417,7 @@ export default function Register({ allowedRegistrations }: RegisterPageProps) {
               }}
             >
               <ChevronLeftIcon />
-              previous page
+              Previous Page
             </div>
           )}
 
@@ -428,7 +428,7 @@ export default function Register({ allowedRegistrations }: RegisterPageProps) {
                 setRegistrationSection(registrationSection + 1);
               }}
             >
-              next page
+              Next Page
               <ChevronRightIcon />
             </div>
           )}

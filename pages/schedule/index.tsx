@@ -9,7 +9,9 @@ import {
 import {
   Scheduler,
   DayView,
+  WeekView,
   Appointments,
+  AllDayPanel,
   Toolbar,
   DateNavigator,
   TodayButton,
@@ -99,7 +101,7 @@ type AppointmentProps = Appointments.AppointmentProps & WithStyles<typeof styles
 type AppointmentContentProps = Appointments.AppointmentContentProps & WithStyles<typeof styles>;
 
 const isWeekEnd = (date: Date): boolean => date.getDay() === 0 || date.getDay() === 6;
-const defaultCurrentDate = new Date();
+const defaultCurrentDate = '2024-09-08';
 {
   /* !!!change */
 }
@@ -246,19 +248,20 @@ export default function Calendar(props: { scheduleCard: ScheduleEvent[] }) {
 
   return (
     <>
-      <div className="text-6xl font-primary text-complementary p-6">Schedule</div>
+      <div className="text-6xl font-primary text-complementary p-6 font-bold">Schedule</div>
       <div className="flex flex-wrap lg:justify-between px-6 h-[75vh]">
         {/* Calendar */}
-        <div className="overflow-y-auto overflow-x-hidden lg:w-[65%] w-full h-full border-2 border-black rounded-md">
+        <div className="overflow-y-auto overflow-x-hidden lg:w-[65%] w-full h-full border-2 border-primary rounded-md">
           <Paper>
             <div className="flex flex-row">
               <Scheduler data={props.scheduleCard}>
                 <ViewState defaultCurrentDate={defaultCurrentDate} />
-                <DayView startDayHour={8} endDayHour={24} intervalCount={1} />
+                <WeekView startDayHour={8} endDayHour={24} intervalCount={1} />
                 <Appointments
                   appointmentComponent={Appointment}
                   appointmentContentComponent={AppointmentContent}
                 />
+                <AllDayPanel />
                 <Resources data={resources} mainResourceName={'track'} />
                 <Toolbar />
                 <DateNavigator />
@@ -273,51 +276,53 @@ export default function Calendar(props: { scheduleCard: ScheduleEvent[] }) {
         </div>
 
         {/* Event info card */}
-        <div className="overflow-y-auto flex flex-col justify-between lg:w-[30%] w-full h-full lg:my-0 my-2 border-2 border-black rounded-md bg-white p-4">
+        <div className="overflow-y-auto flex flex-col justify-between lg:w-[30%] h-full lg:my-0 my-2 border-2 border-primary rounded-md bg-base-100 p-4">
           <section>
             {eventData.title === '' ? (
-              <div className="text-2xl">Click on an event for more info</div>
+              <div className="text-2xl text-primary-content font-medium">
+                Click on an event for more info
+              </div>
             ) : (
               <div />
             )}
-            <h1 className="md:text-4xl text-2xl font-bold">{eventData.title}</h1>
-            <div className="md:text-lg text-sm mb-4">{eventData.speakers}</div>
+            <h1 className="md:text-4xl text-2xl font-bold text-complementary">{eventData.title}</h1>
+            <div className="md:text-lg text-sm mb-4 text-primary">{eventData.speakers}</div>
 
             {/* Shows card info if user has clicked on an event */}
             <div className={eventData.title === '' ? 'hidden' : 'inline'}>
-              <div className="grid grid-cols-2 gap-y-2 md:my-8 my-6 md:text-lg text-sm">
+              <div className="grid grid-cols-2 gap-y-2 md:my-8 my-6 md:text-lg text-sm text-primary">
                 <div className="">
-                  <p className="flex items-center font-semibold">
+                  <p className="flex items-center font-semibold text-primary-content">
                     {<CalendarIcon style={{ fontSize: 'medium', margin: '2px' }} />}
                     Date
                   </p>
                   <p>{eventData.date}</p>
                 </div>
                 <div className="">
-                  <p className="flex items-center font-semibold">
+                  <p className="flex items-center font-semibold text-primary-content">
                     {<PinDrop style={{ fontSize: 'medium', margin: '2px' }} />}
                     Location
                   </p>
                   <p>{eventData.location}</p>
                 </div>
                 <div className="">
-                  <p className="flex items-center font-semibold">
+                  <p className="flex items-center font-semibold text-primary-content">
                     {<ClockIcon style={{ fontSize: 'large', margin: '2px' }} />}
                     Time
                   </p>
                   <p>{eventData.time}</p>
                 </div>
-                <div className="">
+                {/* <div className="">
                   <p className="flex items-center font-semibold">
                     {<Backpack style={{ fontSize: 'medium', margin: '2px' }} />}
                     Page
                   </p>
                   <p>{eventData.page}</p>
-                </div>
+                </div> */}
               </div>
 
-              <div className="lg:text-base text-sm">
-                <p className="flex items-center font-semibold">
+              <div className="lg:text-base text-sm text-primary">
+                <p className="flex items-center font-semibold text-primary-content">
                   {<Description style={{ fontSize: 'medium', margin: '2px' }} />}
                   Description
                 </p>
@@ -326,7 +331,7 @@ export default function Calendar(props: { scheduleCard: ScheduleEvent[] }) {
             </div>
           </section>
 
-          <div className="text-right">*All events are given in MST</div>
+          <div className="text-right text-primary-content">*All events are given in MST</div>
         </div>
       </div>
     </>

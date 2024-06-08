@@ -96,12 +96,12 @@ export default function AppHeader() {
             </ul>
           </div>
           <Link href="/">
-            <a className="flex gap-2 ml-[6px] font-display self-center items-center md:ml-0">
+            <a className="flex gap-2 ml-[6px] font-display self-center items-center m-5 md:ml-0">
               {/* !change src */}
               <Image
                 src={'/assets/mru_title_light.png'}
-                width={236}
-                height={75}
+                width={189}
+                height={60}
                 alt="MRUHacks logo"
               />
             </a>
