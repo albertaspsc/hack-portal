@@ -44,31 +44,31 @@ const styles = ({ palette }: Theme) =>
       border: `2px solid ${red[500]}`,
       backgroundColor: `${grey[900]}`,
       borderRadius: 8,
-      boxShadow: ` 0 0 16px 1px ${red[400]} `,
+      // boxShadow: ` 0 0 16px 1px ${red[400]} `,
     },
     SponsorTypeAppointment: {
       border: `2px solid ${orange[500]}`,
       backgroundColor: `${grey[900]}`,
       borderRadius: 8,
-      boxShadow: ` 0 0 16px 4px ${orange[500]} `,
+      // boxShadow: ` 0 0 16px 4px ${orange[500]} `,
     },
     TechTalkTypeAppointment: {
       border: `2px solid ${indigo[500]}`,
       backgroundColor: `${grey[900]}`,
       borderRadius: 8,
-      boxShadow: ` 0 0 16px 4px ${indigo[500]} `,
+      // boxShadow: ` 0 0 16px 4px ${indigo[500]} `,
     },
     WorkshopTypeAppointment: {
       border: `2px solid ${purple[500]}`,
       backgroundColor: `${grey[900]}`,
       borderRadius: 8,
-      boxShadow: ` 0 0 16px 4px ${purple[500]} `,
+      // boxShadow: ` 0 0 16px 4px ${purple[500]} `,
     },
     SocialTypeAppointment: {
       border: `2px solid ${blue[500]}`,
       backgroundColor: `${grey[900]}`,
       borderRadius: 8,
-      boxShadow: ` 0 0 16px 4px ${blue[500]} `,
+      //  boxShadow: ` 0 0 16px 4px ${blue[500]} `,
     },
     weekEndCell: {
       backgroundColor: alpha(palette.action.disabledBackground, 0.04),
@@ -109,10 +109,10 @@ const defaultCurrentDate = '2024-09-08';
 const AppointmentContent = withStyles(styles, { name: 'AppointmentContent' })(
   ({ classes, data, ...restProps }: AppointmentContentProps) => {
     let Event = 'Event';
-    if (data.Event === 2) Event = 'Sponsor';
-    if (data.Event === 3) Event = 'Tech Talk';
-    if (data.Event === 4) Event = 'Workshop';
-    if (data.Event === 5) Event = 'Social';
+    if (data.type === 'sponsor') Event = 'Sponsor';
+    if (data.type === 'tech talk') Event = 'Tech Talk';
+    if (data.type === 'workshop') Event = 'Workshop';
+    if (data.type === 'social') Event = 'Social';
 
     return (
       <Appointments.AppointmentContent {...restProps} data={data}>
@@ -148,11 +148,11 @@ export default function Calendar(props: { scheduleCard: ScheduleEvent[] }) {
       <Appointments.Appointment
         {...restProps}
         className={classNames({
-          [classes.EventTypeAppointment]: data.Event === 1,
-          [classes.SponsorTypeAppointment]: data.Event === 2,
-          [classes.TechTalkTypeAppointment]: data.Event === 3,
-          [classes.WorkshopTypeAppointment]: data.Event === 4,
-          [classes.SocialTypeAppointment]: data.Event === 5,
+          [classes.EventTypeAppointment]: data.type === 'Event',
+          [classes.SponsorTypeAppointment]: data.type === 'Sponsor',
+          [classes.TechTalkTypeAppointment]: data.type === 'Tech Talk',
+          [classes.WorkshopTypeAppointment]: data.type === 'Workshop',
+          [classes.SocialTypeAppointment]: data.type === 'Social',
           [classes.appointment]: true,
         })}
         data={data}
