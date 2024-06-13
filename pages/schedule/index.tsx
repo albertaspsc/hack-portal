@@ -139,6 +139,7 @@ export default function Calendar(props: { scheduleCard: ScheduleEvent[] }) {
     description: '',
     location: '',
     track: '',
+    event: '',
   });
   const [eventDescription, setEventDescription] = useState(null);
 
@@ -196,6 +197,7 @@ export default function Calendar(props: { scheduleCard: ScheduleEvent[] }) {
       description: data.description,
       location: data.location,
       track: data.track,
+      event: data.Event,
     });
   };
 
@@ -312,13 +314,13 @@ export default function Calendar(props: { scheduleCard: ScheduleEvent[] }) {
                   </p>
                   <p>{eventData.time}</p>
                 </div>
-                {/* <div className="">
-                  <p className="flex items-center font-semibold">
-                    {<Backpack style={{ fontSize: 'medium', margin: '2px' }} />}
-                    Page
+                <div className="">
+                  <p className="flex items-center font-semibold text-primary-content">
+                    {<a style={{ fontSize: 'medium', margin: '2px' }} />}
+                    Add to Calendar
                   </p>
-                  <p>{eventData.page}</p>
-                </div> */}
+                  <a href={`/api/schedule/ics?Event=${eventData.event}`}>Download Event</a>
+                </div>
               </div>
 
               <div className="lg:text-base text-sm text-primary">
