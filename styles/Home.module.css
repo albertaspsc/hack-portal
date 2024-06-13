@@ -79,7 +79,7 @@
 }
 
 .element {
-  font-family: 'wavehaus';
+  font-family: 'DMSans';
 }
 
 .card {
@@ -118,8 +118,8 @@
 }
 
 @font-face {
-  font-family: 'wavehaus';
-  src: url('/fonts/Wavehaus-66Book.ttf') format('truetype');
+  font-family: 'DMSans';
+  src: url('/fonts/Sans.ttf') format('truetype');
   font-display: auto;
 }
 
