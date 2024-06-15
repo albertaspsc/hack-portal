@@ -44,31 +44,26 @@ const styles = ({ palette }: Theme) =>
       border: `2px solid ${red[500]}`,
       backgroundColor: `${grey[900]}`,
       borderRadius: 8,
-      // boxShadow: ` 0 0 16px 1px ${red[400]} `,
     },
     SponsorTypeAppointment: {
       border: `2px solid ${orange[500]}`,
       backgroundColor: `${grey[900]}`,
       borderRadius: 8,
-      // boxShadow: ` 0 0 16px 4px ${orange[500]} `,
     },
     TechTalkTypeAppointment: {
       border: `2px solid ${indigo[500]}`,
       backgroundColor: `${grey[900]}`,
       borderRadius: 8,
-      // boxShadow: ` 0 0 16px 4px ${indigo[500]} `,
     },
     WorkshopTypeAppointment: {
       border: `2px solid ${purple[500]}`,
       backgroundColor: `${grey[900]}`,
       borderRadius: 8,
-      // boxShadow: ` 0 0 16px 4px ${purple[500]} `,
     },
     SocialTypeAppointment: {
       border: `2px solid ${blue[500]}`,
       backgroundColor: `${grey[900]}`,
       borderRadius: 8,
-      //  boxShadow: ` 0 0 16px 4px ${blue[500]} `,
     },
     weekEndCell: {
       backgroundColor: alpha(palette.action.disabledBackground, 0.04),
