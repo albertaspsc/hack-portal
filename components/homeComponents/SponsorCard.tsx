@@ -13,7 +13,7 @@ interface SponsorCardProps {
  * Keynote Speaker card for landing page.
  */
 export default function SponsorCard(props: SponsorCardProps) {
-  const [imgSrc, setImgSrc] = useState();
+  const [imgSrc, setImgSrc] = useState(undefined);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -31,7 +31,7 @@ export default function SponsorCard(props: SponsorCardProps) {
           console.error('Could not find matching image file');
         });
     }
-  }, []);
+  }, [props.reference]);
 
   if (loading) return <LoadIcon width={100} height={100} />;
 
