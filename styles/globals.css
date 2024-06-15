@@ -7,25 +7,25 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: sans-serif;
+  font-family: 'DMSans';
 }
 
 @font-face {
-  font-family: 'wavehaus';
-  src: url('/fonts/Wavehaus-66Book.ttf') format('truetype');
+  font-family: 'DMSans';
+  src: url('/fonts/DMSans.ttf') format('truetype');
   font-display: auto;
 }
 
 .MuiTypography-root {
-  font-family: 'wavehaus' !important;
-  src: url('/fonts/Wavehaus-66Book.ttf') format('truetype') !important;
+  font-family: 'DMSans' !important;
+  src: url('/fonts/DMSans.ttf') format('truetype') !important;
   font-display: auto !important;
   font-weight: 600 !important;
 }
 
 .Target-root {
-  font-family: 'wavehaus' !important;
-  src: url('/fonts/Wavehaus-66Book.ttf') format('truetype') !important;
+  font-family: 'DMSans' !important;
+  src: url('/fonts/DMSans.ttf') format('truetype') !important;
   font-display: auto !important;
 }
 
@@ -39,7 +39,7 @@ a.link {
 }
 
 .element {
-  font-family: 'wavehaus';
+  font-family: 'DMSans';
 }
 
 .profile-view {
@@ -94,6 +94,7 @@ a.link {
 }
 
 @media (max-width: 1024px) {
+
   /* Home page video scaling */
   .video {
     zoom: 0.85;
@@ -128,6 +129,7 @@ a.link {
   -o-transition: width 0.15s ease-in-out;
   transition: width 0.15s ease-in-out;
 }
+
 .menuactive {
   width: 100%;
 }

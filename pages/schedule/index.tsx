@@ -44,31 +44,26 @@ const styles = ({ palette }: Theme) =>
       border: `2px solid ${red[500]}`,
       backgroundColor: `${grey[900]}`,
       borderRadius: 8,
-      // boxShadow: ` 0 0 16px 1px ${red[400]} `,
     },
     SponsorTypeAppointment: {
       border: `2px solid ${orange[500]}`,
       backgroundColor: `${grey[900]}`,
       borderRadius: 8,
-      // boxShadow: ` 0 0 16px 4px ${orange[500]} `,
     },
     TechTalkTypeAppointment: {
       border: `2px solid ${indigo[500]}`,
       backgroundColor: `${grey[900]}`,
       borderRadius: 8,
-      // boxShadow: ` 0 0 16px 4px ${indigo[500]} `,
     },
     WorkshopTypeAppointment: {
       border: `2px solid ${purple[500]}`,
       backgroundColor: `${grey[900]}`,
       borderRadius: 8,
-      // boxShadow: ` 0 0 16px 4px ${purple[500]} `,
     },
     SocialTypeAppointment: {
       border: `2px solid ${blue[500]}`,
       backgroundColor: `${grey[900]}`,
       borderRadius: 8,
-      //  boxShadow: ` 0 0 16px 4px ${blue[500]} `,
     },
     weekEndCell: {
       backgroundColor: alpha(palette.action.disabledBackground, 0.04),
@@ -139,6 +134,7 @@ export default function Calendar(props: { scheduleCard: ScheduleEvent[] }) {
     description: '',
     location: '',
     track: '',
+    event: '',
   });
   const [eventDescription, setEventDescription] = useState(null);
 
@@ -196,6 +192,7 @@ export default function Calendar(props: { scheduleCard: ScheduleEvent[] }) {
       description: data.description,
       location: data.location,
       track: data.track,
+      event: data.Event,
     });
   };
 
@@ -312,13 +309,13 @@ export default function Calendar(props: { scheduleCard: ScheduleEvent[] }) {
                   </p>
                   <p>{eventData.time}</p>
                 </div>
-                {/* <div className="">
-                  <p className="flex items-center font-semibold">
-                    {<Backpack style={{ fontSize: 'medium', margin: '2px' }} />}
-                    Page
+                <div className="">
+                  <p className="flex items-center font-semibold text-primary-content">
+                    {<a style={{ fontSize: 'medium', margin: '2px' }} />}
+                    Add to Calendar
                   </p>
-                  <p>{eventData.page}</p>
-                </div> */}
+                  <a href={`/api/schedule/ics?Event=${eventData.event}`}>Download Event</a>
+                </div>
               </div>
 
               <div className="lg:text-base text-sm text-primary">

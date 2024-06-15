@@ -17,7 +17,7 @@ module.exports = {
         complementaryDark: '#252427',
       },
       fontFamily: {
-        sans: ['Roboto', 'Roboto Mono', 'sans-serif'],
+        sans: ['DMSans', 'DMSans Italic', 'sans-serif'],
       },
       width: {
         '1/8': '12.5%',
