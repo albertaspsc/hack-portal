@@ -10,10 +10,7 @@ const SCHEDULE_EVENTS = '/schedule-events';
 
 async function getIcalEvent(req: NextApiRequest, res: NextApiResponse) {
   let event = await db.collection(SCHEDULE_EVENTS).get();
-  console.log(event);
   if (event.empty) {
-    console.log(event.size);
-    console.log(req.query.Event);
   }
   let eventName = '';
   let icalEvents = [];
@@ -33,14 +30,11 @@ async function getIcalEvent(req: NextApiRequest, res: NextApiResponse) {
     icalEvents.push(createIcalEvent(data));
   });
   let data = icalEvents[0].value;
-  console.log(data);
   res.setHeader('Content-disposition', `attachment; filename=${eventName}.ics`);
   res.setHeader('Content-Type', 'text/calendar').status(200).send(data);
 }
 
 function createIcalEvent(event) {
-  console.log(event.startDate);
-  console.log(event.endDate);
   let eventAttributes = {
     start: [
       event.startDate.getUTCFullYear(),
@@ -64,7 +58,6 @@ function createIcalEvent(event) {
     status: 'CONFIRMED',
     busyStatus: 'BUSY',
   };
-  console.log(eventAttributes);
   return createEvent(eventAttributes);
 }
 
