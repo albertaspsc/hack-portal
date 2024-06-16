@@ -48,19 +48,19 @@ export default function DashboardHeader() {
         <button
           ref={accordian}
           onClick={() => triggerAccordion()}
-          className="accordion text-left p-2 text-sm bg-primaryDark text-secondary flex justify-between relative"
+          className="accordion text-left p-2 text-sm bg-complementary text-white flex justify-between relative"
         >
           <p>Dashboard Menu</p>
           <ChevronRightIcon className={`${isOpen ? 'transform rotate-90' : ''} w-5 h-5`} />
         </button>
-        <div className="panel w-full bg-secondaryDark text-primaryDark text-sm">
+        <div className="panel w-full bg-white text-primary-content text-sm">
           <ul className="">
-            <li className="p-2 hover:bg-secondary cursor-pointer">
+            <li className="p-2 hover:bg-base-100 hover:text-primary cursor-pointer">
               <Link href="/dashboard" passHref>
                 <div>HackCenter</div>
               </Link>
             </li>
-            <li className="p-2 hover:bg-secondary cursor-pointer">
+            <li className="p-2 hover:bg-base-100 hover:text-primary cursor-pointer">
               <Link href="/dashboard/questions" passHref>
                 <div>Ask a Question</div>
               </Link>
