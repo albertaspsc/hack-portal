@@ -73,30 +73,30 @@ export default function AdminHeader() {
         <button
           ref={accordian}
           onClick={() => triggerAccordion()}
-          className="accordion text-left p-2 text-sm bg-primaryDark text-secondary flex justify-between relative"
+          className="accordion text-left p-2 text-sm bg-complementary text-white flex justify-between relative"
         >
           <p>Admin Menu</p>
           <ChevronRightIcon className={`${isOpen ? 'transform rotate-90' : ''} w-5 h-5`} />
         </button>
-        <div className="panel w-full bg-secondaryDark text-primaryDark text-sm">
+        <div className="panel w-full bg-white text-primary-content text-sm">
           <ul className="">
-            <li className="p-2 hover:bg-secondary cursor-pointer">
+            <li className="p-2 hover:bg-base-100 hover:text-primary cursor-pointer">
               <Link href="/admin" passHref>
                 <div>Event Dashboard</div>
               </Link>
             </li>
-            <li className="p-2 hover:bg-secondary cursor-pointer">
+            <li className="p-2 hover:bg-base-100 hover:text-primary cursor-pointer">
               <Link href="/admin/scan" passHref>
                 <div>Scanner</div>
               </Link>
             </li>
-            <li className="p-2 hover:bg-[#DCDEFF]">
+            <li className="p-2 hover:bg-base-100 hover:text-primary cursor-pointer">
               <Link href="/admin/users" passHref>
                 <div>User Dashboard</div>
               </Link>
             </li>
             {isAuthorized(user) && (
-              <li className="p-2 hover:bg-secondary cursor-pointer">
+              <li className="p-2 hover:bg-base-100 hover:text-primary cursor-pointer">
                 <Link href="/admin/stats" passHref>
                   <div>Stats at a Glance</div>
                 </Link>

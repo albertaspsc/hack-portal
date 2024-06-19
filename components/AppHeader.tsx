@@ -77,7 +77,7 @@ export default function AppHeader() {
       <header className="top-0 fixed justify-between flex flex-row w-full bg-primary items-center h-20 z-10 lg:px-4 px-2 drop-shadow">
         <div className="flex flex-row order-1 md:order-none items-center">
           {/* Smartphone nav */}
-          <div onClick={toggleMenu} className="md:hidden cursor-pointer text-complementary">
+          <div onClick={toggleMenu} className="md:hidden cursor-pointer text-base-100">
             {mobileIcon ? <MenuIcon /> : <CloseIcon />}
             <ul
               className={`${
