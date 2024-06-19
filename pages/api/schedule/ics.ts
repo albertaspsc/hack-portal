@@ -35,15 +35,23 @@ async function getIcalEvent(req: NextApiRequest, res: NextApiResponse) {
 }
 
 function createIcalEvent(event) {
-  let startDate: number = event.startDate;
-  let endDate: number = event.endDate;
-  let inputType = 'local';
-  let startArray = convertTimestampToArray(startDate, inputType);
-  let endArray = convertTimestampToArray(endDate, inputType);
   let eventAttributes: EventAttributes = {
-    start: startArray,
-    startOutputType: 'local',
-    end: endArray,
+    start: [
+      event.startDate.getUTCFullYear(),
+      event.startDate.getUTCMonth() + 1,
+      event.startDate.getUTCDate(),
+      event.startDate.getUTCHours(),
+      event.startDate.getUTCMinutes(),
+    ],
+    startInputType: 'utc',
+    startOutputType: 'utc',
+    end: [
+      event.endDate.getUTCFullYear(),
+      event.endDate.getUTCMonth() + 1,
+      event.endDate.getUTCDate(),
+      event.endDate.getUTCHours(),
+      event.endDate.getUTCMinutes(),
+    ],
     title: event.title,
     description: event.description,
     location: event.location,
