@@ -29,9 +29,7 @@ import { RequestHelper } from '../../lib/request-helper';
 import CalendarIcon from '@material-ui/icons/CalendarToday';
 import PinDrop from '@material-ui/icons/PinDrop';
 import ClockIcon from '@material-ui/icons/AccessTime';
-import Backpack from '@material-ui/icons/LocalMall';
 import Description from '@material-ui/icons/BorderColor';
-import firebase from 'firebase';
 
 const styles = ({ palette }: Theme) =>
   createStyles({
