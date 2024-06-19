@@ -2,7 +2,7 @@ import { firestore } from 'firebase-admin';
 import { NextApiRequest, NextApiResponse } from 'next';
 import initializeApi from '../../../lib/admin/init';
 import { userIsAuthorized } from '../../../lib/authorization/check-authorization';
-import { createEvent } from 'ics';
+import { convertTimestampToArray, createEvent, EventAttributes } from 'ics';
 initializeApi();
 const db = firestore();
 
@@ -35,23 +35,15 @@ async function getIcalEvent(req: NextApiRequest, res: NextApiResponse) {
 }
 
 function createIcalEvent(event) {
-  let eventAttributes = {
-    start: [
-      event.startDate.getUTCFullYear(),
-      event.startDate.getUTCMonth() + 1,
-      event.startDate.getUTCDate(),
-      event.startDate.getUTCHours(),
-      event.startDate.getUTCMinutes(),
-    ],
-    startInputType: 'utc',
+  let startDate: number = event.startDate;
+  let endDate: number = event.endDate;
+  let inputType = 'local';
+  let startArray = convertTimestampToArray(startDate, inputType);
+  let endArray = convertTimestampToArray(endDate, inputType);
+  let eventAttributes: EventAttributes = {
+    start: startArray,
     startOutputType: 'local',
-    end: [
-      event.endDate.getUTCFullYear(),
-      event.endDate.getUTCMonth() + 1,
-      event.endDate.getUTCDate(),
-      event.endDate.getUTCHours(),
-      event.endDate.getUTCMinutes(),
-    ],
+    end: endArray,
     title: event.title,
     description: event.description,
     location: event.location,
