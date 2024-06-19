@@ -314,7 +314,9 @@ export default function Calendar(props: { scheduleCard: ScheduleEvent[] }) {
                     {<a style={{ fontSize: 'medium', margin: '2px' }} />}
                     Add to Calendar
                   </p>
-                  <a href={`/api/schedule/ics?Event=${eventData.event}`}>Download Event</a>
+                  <a className="underline" href={`/api/schedule/ics?Event=${eventData.event}`}>
+                    Download Event
+                  </a>
                 </div>
               </div>
 
