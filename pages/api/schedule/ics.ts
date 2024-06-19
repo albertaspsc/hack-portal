@@ -44,7 +44,7 @@ function createIcalEvent(event) {
       event.startDate.getUTCMinutes(),
     ],
     startInputType: 'utc',
-    startOutputType: 'local',
+    startOutputType: 'utc',
     end: [
       event.endDate.getUTCFullYear(),
       event.endDate.getUTCMonth() + 1,
